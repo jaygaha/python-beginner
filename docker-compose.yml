@@ -1,0 +1,18 @@
+services:
+  python_app:
+    build:
+      context: .
+      dockerfile: .docker/python/Dockerfile
+    container_name: "python"
+    working_dir: '/workspace'
+    tty: "true"
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./workspace:/workspace
+    networks:
+      - python_network
+
+networks:
+  python_network:
+    driver: bridge
