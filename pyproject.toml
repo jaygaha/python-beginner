@@ -1,0 +1,32 @@
+[project]
+name = "Python-Beginner"
+version = "2025.1.0"
+dependencies = [
+]
+requires-python = ">=3.11"
+authors = [
+  {name = "Jay Gaha", email = "jaygaha@gmail.com"},
+]
+description = "Python beginner tutorials!"
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+keywords = ["weather app", "python", "weather", "beginners", "first-app"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[project.optional-dependencies]
+gui = ["PyQt5"]
+cli = [
+]
+
+[project.urls]
+Homepage = "https://github.com/jaygaha/python-beginner"
+Documentation = "https://github.com/jaygaha/python-beginner/README.md"
+Repository = "git@github.com:jaygaha/python-beginner.git"
+"Bug Tracker" = "https://github.com/jaygaha/python-beginner/issues"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
