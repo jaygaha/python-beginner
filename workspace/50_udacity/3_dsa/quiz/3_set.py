@@ -3,10 +3,15 @@
 # 1. Sets are unordered
 # 2. Sets are not hashable
 # 3. Sets are not iterable
+# 4. Sets are mutable
+# 5. Sets doesnot contain duplicate elements
 
 continents = {"Asia", "Africa", "North America", "South America", "Antarctica"}
 print(len(continents))
 # 5
+#
+# get third element from the set
+print('North America' in continents)
 #
 # Set: a collection of unique items
 continent_set = set(continents)
