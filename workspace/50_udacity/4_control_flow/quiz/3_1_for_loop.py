@@ -91,3 +91,18 @@ for color in colors:
     lower_colors.append(color.lower())
 
 print(lower_colors)
+
+# Strings
+sentence = "The quick brown fox jumped over the lazy dog"
+
+words = sentence.split()
+
+for word in words:
+    print(word)
+
+sentence = "The quick brown fox jumped over the lazy dog"
+
+words = sentence.split()
+
+for i in range(len(words)):
+    words[i] = words[i].lower()
