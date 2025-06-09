@@ -1,0 +1,7 @@
+{% extends "base.jinja2" %}
+{% block title %}Task: {{ task.title }}{% endblock %}
+{% block content %}
+    <h2>{{ task.title }}</h2>
+    <p>{{ task.description or "No description provided." }}</p>
+    <a href="{{ request.route_url('tasks') }}">Back to Task List</a>
+{% endblock %}
