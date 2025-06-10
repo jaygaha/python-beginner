@@ -1,0 +1,135 @@
+{
+    "info": {
+        "_postman_id": "245cafd8-63f5-44dc-9c68-67ee6bc3fff8",
+        "name": "python-aiohttp",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Note",
+            "item": [
+                {
+                    "name": "List",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8070/notes",
+                            "path": [
+                                "notes"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8070"
+                        }
+                    }
+                },
+                {
+                    "name": "Create",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:8070/notes",
+                            "path": [
+                                "notes"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8070"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"title\": \"Lunch\",\n  \"content\": \"How to prepare lunch?\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Details",
+                    "request": {
+                        "method": "GET",
+                        "url": {
+                            "raw": "http://localhost:8070/notes/054db660-8ecb-4b89-af9e-dc783d398845",
+                            "path": [
+                                "notes",
+                                "054db660-8ecb-4b89-af9e-dc783d398845"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8070"
+                        }
+                    }
+                },
+                {
+                    "name": "Update",
+                    "request": {
+                        "method": "PUT",
+                        "url": {
+                            "raw": "http://localhost:8070/notes/054db660-8ecb-4b89-af9e-dc783d398845",
+                            "path": [
+                                "notes",
+                                "054db660-8ecb-4b89-af9e-dc783d398845"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8070"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"title\": \"Lunch Preparation\",\n  \"content\": \"How to prepare lunch? Let's start to prepare lunch.\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete",
+                    "request": {
+                        "method": "DELETE",
+                        "url": {
+                            "raw": "http://localhost:8070/notes/054db660-8ecb-4b89-af9e-dc783d398845",
+                            "path": [
+                                "notes",
+                                "054db660-8ecb-4b89-af9e-dc783d398845"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "8070"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Health",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8070",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8070"
+                }
+            }
+        }
+    ]
+}
