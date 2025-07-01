@@ -1,0 +1,2 @@
+gevent==25.5.1
+greenlet==3.2.3
