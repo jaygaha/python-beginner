@@ -23,6 +23,14 @@ tornado/
 │   └── hello.html      # Sample template
 ├── static/             # Static assets
 │   └── tornado-python.png
+├── i18n/               # Internationalization implementation
+│   ├── app.py          # Multi-language web application
+│   ├── README.md       # i18n documentation
+│   ├── locale/         # Translation files
+│   │   ├── en_US.csv   # English translations
+│   │   └── ja_JP.csv   # Japanese translations
+│   └── templates/      # Localized templates
+│       └── index.html  # Multi-language template
 └── rest_api_app/       # REST API implementation
     ├── app.py
     ├── test_app.py
@@ -46,6 +54,7 @@ tornado/
 - **Signal Handling** - Graceful shutdown on SIGINT/SIGTERM
 - **Logging Integration** - Proper logging setup
 - **Debug Mode** - Auto-reloading and detailed error pages
+- **Internationalization (i18n)** - Multi-language support with locale switching
 
 ## Requirements
 
@@ -351,9 +360,67 @@ class WebSocketHandler(tornado.websocket.WebSocketHandler):
 ## Related Projects
 
 - **REST API** - See `rest_api_app/` for a complete REST API implementation
+- **Internationalization** - See `i18n/` for multi-language web application with locale switching
 - **Advanced Templates** - Explore template inheritance and macros
 - **Database Integration** - Add SQLAlchemy or Motor for database support
 - **Authentication** - Implement user authentication and authorization
+
+## Internationalization (i18n)
+
+The `i18n/` directory contains a comprehensive implementation of internationalization in Tornado, featuring:
+
+### Features
+
+- **Multi-language Support** - English (US) and Japanese translations
+- **URL-based Locale Routing** - `/en_US/about-us` and `/ja_JP/about-us` patterns
+- **Dynamic Language Switching** - Flag-based locale switcher with emoji flags
+- **CSV Translation Files** - Simple translation management with parameterized content
+- **Template Localization** - Full template translation with `{{ _("key") }}` syntax
+- **Fallback Handling** - Automatic fallback to English for unsupported locales
+
+### Quick Start
+
+```bash
+# Navigate to i18n directory
+cd i18n/
+
+# Run the internationalized application
+python app.py
+
+# Access in different languages
+# English: http://localhost:8880/en_US/about-us
+# Japanese: http://localhost:8880/ja_JP/about-us
+```
+
+### Translation Management
+
+Translations are stored in CSV format for easy management:
+
+```csv
+# locale/en_US.csv
+home,Home
+about,About
+created-by,Created by %(author)s
+
+# locale/ja_JP.csv
+home,ホーム
+about,について
+created-by,%(author)s によって作成されました
+```
+
+### Template Usage
+
+Templates use Tornado's built-in translation syntax:
+
+```html
+<nav>
+    <a href="#">{{ _("home") }}</a>
+    <a href="#">{{ _("about") }}</a>
+</nav>
+<p>{{ _("created-by") % {"author": author} }}</p>
+```
+
+For detailed implementation guide and advanced features, see the complete documentation in `i18n/README.md`.
 
 ## Common Patterns
 
