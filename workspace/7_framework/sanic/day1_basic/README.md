@@ -2,12 +2,16 @@
 
 A beginner-friendly Sanic web framework tutorial covering basic routing, JSON responses, URL parameters, POST requests, and async handling.
 
+**Prerequisites:** Basic Python knowledge and understanding of web concepts.
+
+**Next Tutorial:** After completing this tutorial, continue with [Day 2 - Intermediate Concepts](../day2_intermediate/README.md) to learn about middleware, error handling, blueprints, and application listeners.
+
 ---
 
 ## Project Structure
 
 ```
-basic/
+day1_basic/
 ├── app/
 │   ├── __init__.py      # App initialization and configuration
 │   └── routes.py        # All route definitions
@@ -137,5 +141,50 @@ curl http://localhost:8880/api/wait
 - Server runs on `0.0.0.0:8880`
 - Debug mode enabled for development
 - Hot reload available in debug mode
+
+---
+
+## What You've Learned
+
+After completing this tutorial, you should understand:
+- How to create a basic Sanic application
+- How to define routes with different HTTP methods
+- How to handle URL parameters and request data
+- How to return different response types (text, JSON)
+- How to work with async/await in Sanic
+- How to structure a simple Sanic application
+
+## Next Steps
+
+### Ready for Day 2?
+Continue your Sanic journey with [Day 2 - Intermediate Concepts](../day2_intermediate/README.md), which covers:
+- **Middleware**: Request/response processing
+- **Error Handling**: Custom error responses
+- **Blueprints**: Route organization
+- **Application Listeners**: Lifecycle events
+- **Multi-Worker Deployment**: Performance optimization
+
+### Additional Practice Ideas:
+1. Add more complex URL parameters (e.g., `/api/user/<user_id:int>`)
+2. Implement query parameter handling
+3. Add file upload functionality
+4. Create a simple REST API for a resource
+5. Add request validation
+
+---
+
+## Troubleshooting
+
+### Common Issues:
+1. **Port Already in Use**: Change the port number in `main.py`
+2. **Module Import Errors**: Ensure you're running from the correct directory
+3. **JSON Parsing Errors**: Check request Content-Type header
+4. **Async/Await Confusion**: Remember all route handlers must be async
+
+### Debug Tips:
+- Use `print()` statements to debug request data
+- Check the console for error messages
+- Use a tool like Postman or curl to test endpoints
+- Enable debug mode for detailed error information
 
 ---

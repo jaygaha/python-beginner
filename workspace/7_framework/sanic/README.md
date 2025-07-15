@@ -64,10 +64,18 @@ This directory contains various Sanic tutorials and examples:
 
 ```
 sanic/
-├── basic/              # Basic Sanic implementation
+├── day1_basic/              # Basic Sanic implementation
 │   ├── app/
 │   │   ├── __init__.py
 │   │   └── routes.py
+│   ├── main.py
+│   └── README.md
+├── day2_intermediate/       # Intermediate Sanic concepts
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── routes.py
+│   │   ├── api_blueprint.py
+│   │   └── error_handlers.py
 │   ├── main.py
 │   └── README.md
 └── README.md          # This file
@@ -137,12 +145,13 @@ Sanic is designed for speed. Here's how it compares to other Python frameworks:
 
 ## Learning Path
 
-1. **Start with Basic** - Explore the `basic/` directory
+1. **Start with Basic** - Explore the `day1_basic/` directory
 2. **Understand Async** - Learn Python's async/await syntax
 3. **Practice Routing** - Try different route patterns
-4. **Add Middleware** - Implement request/response processing
-5. **Database Integration** - Connect to databases with async drivers
-6. **Production Deployment** - Learn deployment strategies
+4. **Learn Intermediate Concepts** - Explore the `day2_intermediate/` directory
+5. **Add Middleware** - Implement request/response processing
+6. **Database Integration** - Connect to databases with async drivers
+7. **Production Deployment** - Learn deployment strategies
 
 ## Resources
 
@@ -160,12 +169,30 @@ The examples in this directory use Sanic 22.3.0, which provides:
 - Static file serving
 - JSON request/response handling
 
+## Tutorial Structure
+
+### Day 1 - Basic Concepts (`day1_basic/`)
+- Basic routing and HTTP methods
+- JSON and text responses
+- URL parameters and request handling
+- Async programming fundamentals
+- Simple application structure
+
+### Day 2 - Intermediate Concepts (`day2_intermediate/`)
+- Middleware for request/response processing
+- Error handling and custom error responses
+- Blueprints for organizing routes
+- Application lifecycle listeners
+- Multi-worker deployment
+
 ## Getting Started
 
-1. Navigate to the `basic/` directory
-2. Follow the setup instructions in `basic/README.md`
-3. Run the example application
-4. Experiment with the different endpoints
-5. Modify the code to understand how it works
+1. **Begin with Day 1**: Navigate to the `day1_basic/` directory
+2. Follow the setup instructions in `day1_basic/README.md`
+3. Run the example application and test all endpoints
+4. **Progress to Day 2**: Navigate to the `day2_intermediate/` directory
+5. Follow the setup instructions in `day2_intermediate/README.md`
+6. Explore middleware, error handling, and blueprints
+7. Experiment with the code to understand how it works
 
 Happy coding with Sanic!
