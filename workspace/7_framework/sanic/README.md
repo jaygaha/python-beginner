@@ -88,6 +88,16 @@ sanic/
 │   ├── main.py
 │   ├── requirements.txt
 │   └── README.md
+├── day4_jwt/                # JWT Authentication and sanic-ext
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── routes.py
+│   │   ├── auth.py
+│   │   ├── error_handlers.py
+│   │   └── schema.py
+│   ├── main.py
+│   ├── requirements.txt
+│   └── README.md
 └── README.md          # This file
 ```
 
@@ -145,6 +155,12 @@ Sanic is designed for speed. Here's how it compares to other Python frameworks:
 - **Memory Management**: Proper resource cleanup and cursor handling
 - **Configuration Caching**: Environment-based settings loaded once
 
+### Day 4 Security Features
+- **JWT Authentication**: Stateless token-based authentication
+- **Request Validation**: Automatic validation with sanic-ext
+- **Middleware Protection**: Route-level security enforcement
+- **Production Security**: Best practices for secure API development
+
 ## When to Use Sanic
 
 ### Good For:
@@ -166,11 +182,15 @@ Sanic is designed for speed. Here's how it compares to other Python frameworks:
 3. **Practice Routing** - Try different route patterns
 4. **Learn Intermediate Concepts** - Explore the `day2_intermediate/` directory
 5. **Add Middleware** - Implement request/response processing
-6. **Master Advanced Features** - Explore the `day3_sqlite/` directory
-7. **Database Integration** - Learn async SQLite operations and data persistence
-8. **External Service Integration** - Make HTTP requests to external APIs
-9. **Configuration Management** - Implement environment-based configuration
-10. **Production Deployment** - Learn deployment strategies and monitoring
+7. **Master Advanced Features** - Explore the `day3_sqlite/` directory
+8. **Database Integration** - Learn async SQLite operations and data persistence
+9. **External Service Integration** - Make HTTP requests to external APIs
+10. **Configuration Management** - Implement environment-based configuration
+11. **Secure Your Applications** - Explore the `day4_jwt/` directory
+12. **JWT Authentication** - Learn token-based authentication and authorization
+13. **Request Validation** - Master sanic-ext for robust input validation
+14. **Production Security** - Implement security best practices
+15. **Production Deployment** - Learn deployment strategies and monitoring
 
 ## Resources
 
@@ -214,6 +234,15 @@ The examples in this directory use Sanic 22.3.0, which provides:
 - **Enhanced Logging**: Structured logging throughout the application
 - **Production Patterns**: Error handling, resource management, and security best practices
 
+### Day 4 - JWT Authentication (`day4_jwt/`)
+- **JWT Authentication**: Complete token-based authentication system
+- **Sanic-ext Integration**: Advanced request validation and dependency injection
+- **Authentication Middleware**: Automatic route protection and user context
+- **Request Validation**: Schema-based validation using dataclasses
+- **Security Best Practices**: Secure token handling and error responses
+- **Protected Routes**: User-specific data access and authorization
+- **Production Security**: Environment-based configuration and security headers
+
 ## Getting Started
 
 1. **Begin with Day 1**: Navigate to the `day1_basic/` directory
@@ -227,29 +256,38 @@ The examples in this directory use Sanic 22.3.0, which provides:
 9. Learn database integration, external APIs, and advanced validation
 10. Practice with query parameters, typed routes, and JSON validation
 11. Experiment with the configuration system and logging
-12. Test all endpoints and error handling scenarios
+12. **Master Security with Day 4**: Navigate to the `day4_jwt/` directory
+13. Follow the setup instructions in `day4_jwt/README.md`
+14. Learn JWT authentication and request validation with sanic-ext
+15. Practice with protected routes and authentication middleware
+16. Implement secure API patterns and best practices
+17. Test all endpoints and error handling scenarios
 
 ## Tutorial Progression Comparison
 
-| Feature | Day 1 | Day 2 | Day 3 |
-|---------|-------|-------|-------|
-| **Routing** | Basic GET/POST | Blueprints | Query params, typed routes |
-| **Responses** | Text, JSON | Custom headers | Enhanced validation |
-| **Error Handling** | Basic exceptions | Centralized handlers | Comprehensive logging |
-| **Architecture** | Simple structure | Middleware, listeners | Configuration management |
-| **Data Storage** | In-memory | None | Async SQLite database |
-| **External Services** | None | None | HTTP client with httpx |
-| **Configuration** | Hardcoded | Basic setup | Environment-based |
-| **Logging** | Print statements | Basic logging | Structured logging |
-| **Production Ready** | Development only | Multi-worker | Full production patterns |
-| **Complexity** | Beginner | Intermediate | Advanced |
+| Feature | Day 1 | Day 2 | Day 3 | Day 4 |
+|---------|-------|-------|-------|-------|
+| **Routing** | Basic GET/POST | Blueprints | Query params, typed routes | Protected routes |
+| **Responses** | Text, JSON | Custom headers | Enhanced validation | Secure responses |
+| **Error Handling** | Basic exceptions | Centralized handlers | Comprehensive logging | Auth error handling |
+| **Architecture** | Simple structure | Middleware, listeners | Configuration management | Security middleware |
+| **Data Storage** | In-memory | None | Async SQLite database | User-specific data |
+| **External Services** | None | None | HTTP client with httpx | Secure API calls |
+| **Configuration** | Hardcoded | Basic setup | Environment-based | Security configuration |
+| **Logging** | Print statements | Basic logging | Structured logging | Security event logging |
+| **Authentication** | None | None | None | JWT token-based |
+| **Validation** | Manual | None | JSON validation | Schema validation |
+| **Security** | None | Basic | Data protection | Full authentication |
+| **Production Ready** | Development only | Multi-worker | Full production patterns | Security best practices |
+| **Complexity** | Beginner | Intermediate | Advanced | Expert |
 
 ### Learning Path Summary
 
 - **Day 1**: Master the fundamentals of Sanic routing, responses, and async concepts
 - **Day 2**: Learn application organization with middleware, blueprints, and error handling
 - **Day 3**: Build production-ready applications with databases, external APIs, and proper configuration
+- **Day 4**: Implement secure authentication with JWT tokens, request validation, and security best practices
 
-Each tutorial builds upon the previous one, creating a comprehensive learning experience that takes you from basic concepts to advanced production patterns.
+Each tutorial builds upon the previous one, creating a comprehensive learning experience that takes you from basic concepts to advanced production patterns with full security implementation.
 
 Happy coding with Sanic!
