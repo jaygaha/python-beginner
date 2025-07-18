@@ -1,0 +1,6 @@
+sanic
+sanic-ext
+pyjwt
+aiosqlite
+sanic-cors
+bcrypt
