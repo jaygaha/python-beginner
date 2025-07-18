@@ -98,6 +98,18 @@ sanic/
 │   ├── main.py
 │   ├── requirements.txt
 │   └── README.md
+├── day5_sqlite_jwt/         # Production-ready application with all features
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── routes.py
+│   │   ├── auth.py
+│   │   ├── db.py
+│   │   └── models.py
+│   ├── uploads/
+│   │   └── .gitignore
+│   ├── main.py
+│   ├── requirements.txt
+│   └── README.md
 └── README.md          # This file
 ```
 
@@ -161,6 +173,13 @@ Sanic is designed for speed. Here's how it compares to other Python frameworks:
 - **Middleware Protection**: Route-level security enforcement
 - **Production Security**: Best practices for secure API development
 
+### Day 5 Production Features
+- **Complete Authentication**: JWT + bcrypt password hashing + SQLite user storage
+- **File Upload/Download**: Secure file handling with validation and path protection
+- **Database Integration**: Full async SQLite with user management and notes system
+- **CORS Support**: Frontend integration with configurable CORS policies
+- **Production Security**: Comprehensive security measures for real-world deployment
+
 ## When to Use Sanic
 
 ### Good For:
@@ -186,11 +205,15 @@ Sanic is designed for speed. Here's how it compares to other Python frameworks:
 8. **Database Integration** - Learn async SQLite operations and data persistence
 9. **External Service Integration** - Make HTTP requests to external APIs
 10. **Configuration Management** - Implement environment-based configuration
-11. **Secure Your Applications** - Explore the `day4_jwt/` directory
-12. **JWT Authentication** - Learn token-based authentication and authorization
-13. **Request Validation** - Master sanic-ext for robust input validation
-14. **Production Security** - Implement security best practices
-15. **Production Deployment** - Learn deployment strategies and monitoring
+13. **Secure Your Applications** - Explore the `day4_jwt/` directory
+14. **JWT Authentication** - Learn token-based authentication and authorization
+15. **Request Validation** - Master sanic-ext for robust input validation
+16. **Production Security** - Implement security best practices
+17. **Build Production Apps** - Explore the `day5_sqlite_jwt/` directory
+18. **Complete Integration** - Combine all features in a production-ready application
+19. **File Upload/Download** - Secure file handling with validation
+20. **CORS & Frontend** - Enable frontend integration with proper CORS
+21. **Production Deployment** - Learn deployment strategies and monitoring
 
 ## Resources
 
@@ -243,6 +266,16 @@ The examples in this directory use Sanic 22.3.0, which provides:
 - **Protected Routes**: User-specific data access and authorization
 - **Production Security**: Environment-based configuration and security headers
 
+### Day 5 - Production-Ready Application (`day5_sqlite_jwt/`)
+- **Complete Authentication**: JWT tokens with bcrypt password hashing
+- **Database Integration**: Full async SQLite with user management and notes
+- **File Upload/Download**: Secure file handling with validation and protection
+- **Pagination System**: Efficient data retrieval with query parameters
+- **CORS Support**: Frontend integration with configurable CORS policies
+- **Production Security**: Comprehensive security measures and input validation
+- **Error Handling**: Robust error handling with proper logging
+- **Environment Configuration**: Production-ready configuration management
+
 ## Getting Started
 
 1. **Begin with Day 1**: Navigate to the `day1_basic/` directory
@@ -256,30 +289,37 @@ The examples in this directory use Sanic 22.3.0, which provides:
 9. Learn database integration, external APIs, and advanced validation
 10. Practice with query parameters, typed routes, and JSON validation
 11. Experiment with the configuration system and logging
-12. **Master Security with Day 4**: Navigate to the `day4_jwt/` directory
-13. Follow the setup instructions in `day4_jwt/README.md`
-14. Learn JWT authentication and request validation with sanic-ext
-15. Practice with protected routes and authentication middleware
-16. Implement secure API patterns and best practices
-17. Test all endpoints and error handling scenarios
+16. **Master Security with Day 4**: Navigate to the `day4_jwt/` directory
+17. Follow the setup instructions in `day4_jwt/README.md`
+18. Learn JWT authentication and request validation with sanic-ext
+19. Practice with protected routes and authentication middleware
+20. Implement secure API patterns and best practices
+21. **Build Production Apps with Day 5**: Navigate to the `day5_sqlite_jwt/` directory
+22. Follow the setup instructions in `day5_sqlite_jwt/README.md`
+23. Learn complete application architecture with all advanced features
+24. Practice with file uploads, database operations, and CORS integration
+25. Implement production-ready security and configuration patterns
+26. Test all endpoints and error handling scenarios
 
 ## Tutorial Progression Comparison
 
-| Feature | Day 1 | Day 2 | Day 3 | Day 4 |
-|---------|-------|-------|-------|-------|
-| **Routing** | Basic GET/POST | Blueprints | Query params, typed routes | Protected routes |
-| **Responses** | Text, JSON | Custom headers | Enhanced validation | Secure responses |
-| **Error Handling** | Basic exceptions | Centralized handlers | Comprehensive logging | Auth error handling |
-| **Architecture** | Simple structure | Middleware, listeners | Configuration management | Security middleware |
-| **Data Storage** | In-memory | None | Async SQLite database | User-specific data |
-| **External Services** | None | None | HTTP client with httpx | Secure API calls |
-| **Configuration** | Hardcoded | Basic setup | Environment-based | Security configuration |
-| **Logging** | Print statements | Basic logging | Structured logging | Security event logging |
-| **Authentication** | None | None | None | JWT token-based |
-| **Validation** | Manual | None | JSON validation | Schema validation |
-| **Security** | None | Basic | Data protection | Full authentication |
-| **Production Ready** | Development only | Multi-worker | Full production patterns | Security best practices |
-| **Complexity** | Beginner | Intermediate | Advanced | Expert |
+| Feature | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 |
+|---------|-------|-------|-------|-------|-------|
+| **Routing** | Basic GET/POST | Blueprints | Query params, typed routes | Protected routes | Complete API |
+| **Responses** | Text, JSON | Custom headers | Enhanced validation | Secure responses | Production responses |
+| **Error Handling** | Basic exceptions | Centralized handlers | Comprehensive logging | Auth error handling | Complete error system |
+| **Architecture** | Simple structure | Middleware, listeners | Configuration management | Security middleware | Production architecture |
+| **Data Storage** | In-memory | None | Async SQLite database | User-specific data | Complete database system |
+| **External Services** | None | None | HTTP client with httpx | Secure API calls | File upload/download |
+| **Configuration** | Hardcoded | Basic setup | Environment-based | Security configuration | Production configuration |
+| **Logging** | Print statements | Basic logging | Structured logging | Security event logging | Complete logging system |
+| **Authentication** | None | None | None | JWT token-based | Complete auth system |
+| **Validation** | Manual | None | JSON validation | Schema validation | Complete validation |
+| **Security** | None | Basic | Data protection | Full authentication | Production security |
+| **File Handling** | None | None | None | None | Secure upload/download |
+| **CORS Support** | None | None | None | None | Full CORS integration |
+| **Production Ready** | Development only | Multi-worker | Full production patterns | Security best practices | Complete production app |
+| **Complexity** | Beginner | Intermediate | Advanced | Expert | Master |
 
 ### Learning Path Summary
 
@@ -287,7 +327,8 @@ The examples in this directory use Sanic 22.3.0, which provides:
 - **Day 2**: Learn application organization with middleware, blueprints, and error handling
 - **Day 3**: Build production-ready applications with databases, external APIs, and proper configuration
 - **Day 4**: Implement secure authentication with JWT tokens, request validation, and security best practices
+- **Day 5**: Create complete, production-ready applications combining all features with file handling, CORS, and comprehensive security
 
-Each tutorial builds upon the previous one, creating a comprehensive learning experience that takes you from basic concepts to advanced production patterns with full security implementation.
+Each tutorial builds upon the previous one, creating a comprehensive learning experience that takes you from basic concepts to advanced production patterns with complete feature integration and security implementation.
 
 Happy coding with Sanic!
