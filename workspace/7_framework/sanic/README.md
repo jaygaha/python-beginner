@@ -110,6 +110,18 @@ sanic/
 │   ├── main.py
 │   ├── requirements.txt
 │   └── README.md
+├── day6_todo/               # Todo API with service architecture and dependency injection
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── routes.py
+│   │   ├── services.py
+│   │   └── types.py
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── test_app.py
+│   ├── test_server.py
+│   ├── BUGFIXES_SUMMARY.md
+│   └── README.md
 └── README.md          # This file
 ```
 
@@ -276,6 +288,16 @@ The examples in this directory use Sanic 22.3.0, which provides:
 - **Error Handling**: Robust error handling with proper logging
 - **Environment Configuration**: Production-ready configuration management
 
+### Day 6 - Todo API with Service Architecture (`day6_todo/`)
+- **Service-Oriented Architecture**: Clean separation with UserService and TodoService
+- **Dependency Injection**: Sanic-ext integration for loose coupling and testability
+- **Complete Todo CRUD**: Full todo management with user-specific filtering
+- **Advanced Validation**: Comprehensive input validation with detailed error messages
+- **Type Safety**: TypedDict models with proper type hints and validation
+- **Testing Infrastructure**: Complete test suites for reliability and maintenance
+- **Bug Fixes Documentation**: Real-world issues and solutions for learning
+- **Production Patterns**: Best practices for maintainable API development
+
 ## Getting Started
 
 1. **Begin with Day 1**: Navigate to the `day1_basic/` directory
@@ -294,32 +316,39 @@ The examples in this directory use Sanic 22.3.0, which provides:
 18. Learn JWT authentication and request validation with sanic-ext
 19. Practice with protected routes and authentication middleware
 20. Implement secure API patterns and best practices
-21. **Build Production Apps with Day 5**: Navigate to the `day5_sqlite_jwt/` directory
-22. Follow the setup instructions in `day5_sqlite_jwt/README.md`
-23. Learn complete application architecture with all advanced features
-24. Practice with file uploads, database operations, and CORS integration
-25. Implement production-ready security and configuration patterns
-26. Test all endpoints and error handling scenarios
+25. **Build Production Apps with Day 5**: Navigate to the `day5_sqlite_jwt/` directory
+26. Follow the setup instructions in `day5_sqlite_jwt/README.md`
+27. Learn complete application architecture with all advanced features
+28. Practice with file uploads, database operations, and CORS integration
+29. Implement production-ready security and configuration patterns
+30. Test all endpoints and error handling scenarios
+31. **Master Service Architecture with Day 6**: Navigate to the `day6_todo/` directory
+32. Follow the setup instructions in `day6_todo/README.md`
+33. Learn service-oriented architecture with dependency injection
+34. Practice with comprehensive Todo API development and testing
+35. Implement advanced validation patterns and error handling
+36. Study real-world bug fixes and production-ready patterns
 
 ## Tutorial Progression Comparison
 
-| Feature | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 |
-|---------|-------|-------|-------|-------|-------|
-| **Routing** | Basic GET/POST | Blueprints | Query params, typed routes | Protected routes | Complete API |
-| **Responses** | Text, JSON | Custom headers | Enhanced validation | Secure responses | Production responses |
-| **Error Handling** | Basic exceptions | Centralized handlers | Comprehensive logging | Auth error handling | Complete error system |
-| **Architecture** | Simple structure | Middleware, listeners | Configuration management | Security middleware | Production architecture |
-| **Data Storage** | In-memory | None | Async SQLite database | User-specific data | Complete database system |
-| **External Services** | None | None | HTTP client with httpx | Secure API calls | File upload/download |
-| **Configuration** | Hardcoded | Basic setup | Environment-based | Security configuration | Production configuration |
-| **Logging** | Print statements | Basic logging | Structured logging | Security event logging | Complete logging system |
-| **Authentication** | None | None | None | JWT token-based | Complete auth system |
-| **Validation** | Manual | None | JSON validation | Schema validation | Complete validation |
-| **Security** | None | Basic | Data protection | Full authentication | Production security |
-| **File Handling** | None | None | None | None | Secure upload/download |
-| **CORS Support** | None | None | None | None | Full CORS integration |
-| **Production Ready** | Development only | Multi-worker | Full production patterns | Security best practices | Complete production app |
-| **Complexity** | Beginner | Intermediate | Advanced | Expert | Master |
+| Feature | Day 1 | Day 2 | Day 3 | Day 4 | Day 5 | Day 6 |
+|---------|-------|-------|-------|-------|-------|-------|
+| **Routing** | Basic GET/POST | Blueprints | Query params, typed routes | Protected routes | Complete API | Full CRUD with filtering |
+| **Responses** | Text, JSON | Custom headers | Enhanced validation | Secure responses | Production responses | Consistent API patterns |
+| **Error Handling** | Basic exceptions | Centralized handlers | Comprehensive logging | Auth error handling | Complete error system | Advanced validation errors |
+| **Architecture** | Simple structure | Middleware, listeners | Configuration management | Security middleware | Production architecture | Service-oriented architecture |
+| **Data Storage** | In-memory | None | Async SQLite database | User-specific data | Complete database system | Service layer with models |
+| **External Services** | None | None | HTTP client with httpx | Secure API calls | File upload/download | Service abstraction patterns |
+| **Configuration** | Hardcoded | Basic setup | Environment-based | Security configuration | Production configuration | Dependency injection setup |
+| **Logging** | Print statements | Basic logging | Structured logging | Security event logging | Complete logging system | Service-level logging |
+| **Authentication** | None | None | None | JWT token-based | Complete auth system | Service-ready auth patterns |
+| **Validation** | Manual | None | JSON validation | Schema validation | Complete validation | Type-safe validation |
+| **Security** | None | Basic | Data protection | Full authentication | Production security | Input sanitization |
+| **File Handling** | None | None | None | None | Secure upload/download | N/A |
+| **CORS Support** | None | None | None | None | Full CORS integration | N/A |
+| **Testing** | None | None | Basic | None | Manual testing | Complete test suites |
+| **Production Ready** | Development only | Multi-worker | Full production patterns | Security best practices | Complete production app | Maintainable architecture |
+| **Complexity** | Beginner | Intermediate | Advanced | Expert | Master | Professional |
 
 ### Learning Path Summary
 
@@ -328,7 +357,8 @@ The examples in this directory use Sanic 22.3.0, which provides:
 - **Day 3**: Build production-ready applications with databases, external APIs, and proper configuration
 - **Day 4**: Implement secure authentication with JWT tokens, request validation, and security best practices
 - **Day 5**: Create complete, production-ready applications combining all features with file handling, CORS, and comprehensive security
+- **Day 6**: Master service-oriented architecture with dependency injection, comprehensive testing, and maintainable code patterns
 
-Each tutorial builds upon the previous one, creating a comprehensive learning experience that takes you from basic concepts to advanced production patterns with complete feature integration and security implementation.
+Each tutorial builds upon the previous one, creating a comprehensive learning experience that takes you from basic concepts to professional-grade architecture patterns with complete feature integration, security implementation, and maintainable code practices.
 
 Happy coding with Sanic!
