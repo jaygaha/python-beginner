@@ -1,0 +1,22 @@
+[project]
+name = "math_utils"
+version = "0.1.0"
+description = "A simple math library"
+authors = [
+    {name = "Jay Gaha", email = "jaygaha@gmail.com"}
+]
+readme = "README.md"
+dependencies = []
+[project.optional-dependencies]
+test = ["pytest>=7.0.0"]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py37,py38,py39,py310
+isolated_build = true
+
+[testenv]
+deps = pytest>=7.0.0
+commands = pytest tests/
+"""
