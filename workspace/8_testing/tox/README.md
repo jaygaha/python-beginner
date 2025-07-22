@@ -27,7 +27,7 @@ Tox is a command-line tool that automates and standardizes testing in Python pro
 
 ```
 tox/
-├── math_utils/                 # Example project demonstrating Tox usage
+├── math_utils/                 # Basic example project demonstrating Tox usage
 │   ├── app/
 │   │   ├── __init__.py
 │   │   └── calculator.py       # Simple calculator functions
@@ -37,7 +37,19 @@ tox/
 │   ├── pyproject.toml          # Modern Python project config with Tox
 │   ├── requirements.txt
 │   └── README.md               # Detailed project documentation
-└── README.md                   # This file
+├── math_utils_api/             # Advanced Flask API project with Tox
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── api.py             # Flask REST API endpoints
+│   │   └── calculator.py      # Calculator business logic
+│   ├── tests/
+│   │   ├── __init__.py
+│   │   ├── test_api.py        # API endpoint tests
+│   │   └── test_calculator.py # Unit tests
+│   ├── pyproject.toml         # Advanced Tox config with multiple environments
+│   ├── requirements.txt
+│   └── README.md              # Complete API documentation
+└── README.md                  # This file
 ```
 
 ## Installation
@@ -424,21 +436,64 @@ runner = pytest-xdist
 commands = pytest -n auto tests/
 ```
 
-## 🎓 Learning Project: math_utils
+## 🎓 Learning Projects
 
-The `math_utils/` directory contains a complete example project demonstrating:
-- Proper Tox configuration in `pyproject.toml`
-- Comprehensive test suite with pytest
+### math_utils - Basic Tox Usage
+The `math_utils/` directory contains a foundational example project demonstrating:
+- Basic Tox configuration in `pyproject.toml`
+- Simple calculator functions with comprehensive tests
 - Error handling and edge case testing
 - Python package structure best practices
 
-### Quick Start:
+**Quick Start:**
 ```bash
 cd math_utils/
 tox                    # Run all tests
 tox -e py             # Run in current Python version
 tox -l                # List available environments
 ```
+
+### math_utils_api - Advanced Tox with Flask API
+The `math_utils_api/` directory showcases advanced Tox usage with a production-ready Flask API:
+- **Multi-Environment Testing**: Different Python versions and dependency combinations
+- **Code Quality Pipeline**: Integrated linting, formatting, and coverage
+- **Flask API Testing**: Comprehensive endpoint and error handling tests
+- **Production Features**: Health checks, error handlers, input validation
+- **Advanced Tox Config**: Lint, coverage, and formatting environments
+
+**Key Features:**
+- REST API endpoints for mathematical operations
+- Comprehensive error handling and validation
+- 86% test coverage with detailed reporting
+- Multi-environment testing (py38-311 with different dependency versions)
+- Code quality tools (flake8, black, isort)
+- Production-ready Flask application
+
+**Quick Start:**
+```bash
+cd math_utils_api/
+
+# Run all test environments
+tox
+
+# Run specific environments
+tox -e py39-reqslatest    # Test with latest dependencies
+tox -e lint               # Code quality checks
+tox -e coverage           # Coverage reporting
+tox -e format             # Format code
+
+# Run the Flask API
+export FLASK_APP=app.api
+flask run                 # API available at http://localhost:5000
+```
+
+**API Endpoints:**
+- `POST /add` - Addition
+- `POST /subtract` - Subtraction  
+- `POST /multiply` - Multiplication
+- `POST /divide` - Division (with zero-division handling)
+- `GET /` - Health check with service info
+- `GET /health` - Simple health check
 
 ## Resources
 
@@ -456,13 +511,29 @@ tox -l                # List available environments
 - [Tox Tutorial](https://tox.readthedocs.io/en/latest/tutorial.html)
 - [Testing with Tox and GitHub Actions](https://hynek.me/articles/python-github-actions/)
 
-## Next Steps
+## 🚀 Next Steps
 
-1. **Explore the math_utils project** to see Tox in action
-2. **Set up Tox** for your own Python projects
-3. **Configure CI/CD pipelines** with Tox
-4. **Experiment with different environments** and configurations
-5. **Integrate quality tools** (linting, type checking, security scanning)
+### For Beginners:
+1. **Start with math_utils** to understand basic Tox concepts
+2. **Explore simple configurations** and single-environment testing
+3. **Practice writing tests** with pytest basics
+
+### For Intermediate Users:
+1. **Study math_utils_api** for advanced Tox patterns
+2. **Set up multi-environment testing** for your projects
+3. **Integrate code quality tools** (linting, formatting, coverage)
+4. **Configure CI/CD pipelines** with Tox
+
+### For Advanced Users:
+1. **Experiment with complex dependency matrices**
+2. **Add security scanning** and performance testing environments
+3. **Create custom Tox plugins** and extensions
+4. **Implement advanced CI/CD workflows**
+
+### Recommended Learning Path:
+1. **math_utils** → Learn Tox fundamentals
+2. **math_utils_api** → Master advanced configurations
+3. **Your own projects** → Apply learnings to real-world scenarios
 
 ---
 

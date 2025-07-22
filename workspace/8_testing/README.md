@@ -328,11 +328,34 @@ project/
 
 ### `/tox/`
 - **Focus**: Multi-environment testing with Tox
-- **Project**: Math utilities library
-- **Learning Goals**:
-  - Tox configuration and usage
+- **Projects**: Two comprehensive examples showcasing Tox capabilities
+
+#### `/tox/math_utils/` - Basic Tox Fundamentals
+- **Type**: Simple calculator library
+- **Learning Goals**: 
+  - Basic Tox configuration and usage
   - Testing across Python versions
   - Package structure best practices
+  - Simple pytest integration
+
+#### `/tox/math_utils_api/` - Advanced Tox with Flask API
+- **Type**: Production-ready Flask REST API
+- **Learning Goals**:
+  - Advanced multi-environment testing
+  - Code quality pipeline integration
+  - API endpoint testing with Flask test client
+  - Error handling and input validation
+  - Coverage reporting and CI/CD readiness
+  - Production deployment considerations
+
+**Key Features:**
+- REST API with mathematical operations
+- Comprehensive error handling (400/404/405/500 responses)
+- 86% test coverage with HTML reporting
+- Multi-environment testing (Python 3.8-3.11, dependency variations)
+- Integrated code quality tools (flake8, black, isort)
+- Health check endpoints for monitoring
+- Production-ready Flask application structure
 
 *More testing projects will be added as learning progresses...*
 
@@ -342,19 +365,24 @@ project/
 1. **Start with pytest basics**
 2. **Write simple unit tests**
 3. **Understand assertions and test structure**
-4. **Practice with the math_utils project**
+4. **Practice with the `/tox/math_utils/` project**
+5. **Learn basic Tox configuration**
 
 ### Intermediate Level:
 1. **Learn fixtures and parametrization**
 2. **Practice mocking and patching**
 3. **Implement TDD workflow**
 4. **Set up code coverage reporting**
+5. **Explore Flask API testing with `/tox/math_utils_api/`**
+6. **Master multi-environment testing strategies**
 
 ### Advanced Level:
-1. **Configure multi-environment testing with Tox**
-2. **Set up CI/CD pipelines**
+1. **Master advanced Tox configurations**
+2. **Set up comprehensive CI/CD pipelines**
 3. **Practice property-based testing**
 4. **Learn performance testing techniques**
+5. **Implement production-ready testing workflows**
+6. **Integrate security and quality scanning**
 
 ## Additional Resources
 
@@ -390,12 +418,14 @@ project/
 
 ## Quick Tips
 
-- **Start Small**: Begin with simple unit tests
+- **Start Small**: Begin with simple unit tests (`/tox/math_utils/`)
+- **Progress to Integration**: Move to API testing (`/tox/math_utils_api/`)
 - **Test First**: Try writing tests before implementation
 - **Keep Tests Fast**: Slow tests discourage frequent running
 - **Use Meaningful Names**: Test names should explain what's being tested
 - **Isolate Tests**: Each test should be independent
 - **Test Edge Cases**: Don't just test the happy path
+- **Automate Quality**: Use Tox for consistent testing environments
 
 ---
 
