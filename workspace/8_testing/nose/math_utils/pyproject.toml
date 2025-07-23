@@ -1,0 +1,19 @@
+[project]
+name = "math_utils"
+version = "0.1.0"
+description = "A simple math library"
+authors = [
+    {name = "Jay Gaha", email = "jaygaha@gmail.com"}
+]
+readme = "README.md"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["nose2>=0.12.0"]
+
+[tool.tox]
+legacy_tox_ini = """
+[testenv]
+deps = nose2>=0.12.0
+commands = nose2 -v tests
+"""
