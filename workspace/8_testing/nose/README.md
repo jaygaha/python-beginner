@@ -30,16 +30,28 @@ pip install -e .[test]
 ```
 nose/
 ├── README.md
-└── math_utils/          # Demo package
+├── math_utils/          # Basic unit testing demo
+│   ├── README.md
+│   ├── pyproject.toml   # Project configuration
+│   ├── requirements.txt
+│   ├── app/
+│   │   ├── __init__.py
+│   │   └── calculator.py  # Main module to test
+│   └── tests/
+│       ├── __init__.py
+│       └── test_calculator.py  # Test cases
+└── math_utils_api/      # Flask API testing demo
     ├── README.md
-    ├── pyproject.toml   # Project configuration
+    ├── pyproject.toml   # Flask project configuration
     ├── requirements.txt
     ├── app/
     │   ├── __init__.py
-    │   └── calculator.py  # Main module to test
+    │   ├── calculator.py  # Calculator functions
+    │   └── api.py        # Flask REST API
     └── tests/
         ├── __init__.py
-        └── test_calculator.py  # Test cases
+        ├── test_calculator.py  # Unit tests
+        └── test_api.py    # API endpoint tests
 ```
 
 ## Writing Tests with Nose2
@@ -203,7 +215,9 @@ nose2 --with-coverage --coverage-report html
 6. **Mock External Dependencies**: Use `unittest.mock` for external services
 7. **Keep Tests Fast**: Avoid slow operations in unit tests
 
-## Example: Testing the Math Utils Package
+## Examples: Testing with Nose2
+
+### Basic Unit Testing Example (`math_utils/`)
 
 The `math_utils/` directory contains a complete example demonstrating:
 
@@ -213,7 +227,7 @@ The `math_utils/` directory contains a complete example demonstrating:
 - Exception testing for error conditions
 - Package imports and exports
 
-### Running the Example
+#### Running the Basic Example
 
 ```bash
 cd math_utils
@@ -233,6 +247,72 @@ test_subtract (tests.test_calculator.TestCalculator) ... ok
 Ran 5 tests in 0.001s
 
 OK
+```
+
+### Flask API Testing Example (`math_utils_api/`)
+
+The `math_utils_api/` directory demonstrates advanced testing concepts for web APIs:
+
+- Flask REST API with mathematical operations
+- API endpoint testing with HTTP requests/responses
+- JSON payload validation and error handling
+- Integration testing for web services
+- Comprehensive error condition testing
+
+Key features:
+- **Health Check Endpoints**: `GET /` and `GET /health`
+- **Mathematical Operations**: `POST /add`, `/subtract`, `/multiply`, `/divide`
+- **Error Handling**: Proper HTTP status codes and JSON error responses
+- **Input Validation**: Robust validation of JSON payloads
+
+#### Running the API Testing Example
+
+```bash
+cd math_utils_api
+pip install -e .[test]
+nose2 -v
+```
+
+Expected output:
+```
+test_add (tests.test_calculator.TestCalculator) ... ok
+test_divide (tests.test_calculator.TestCalculator) ... ok
+test_divide_by_zero (tests.test_calculator.TestCalculator) ... ok
+test_multiply (tests.test_calculator.TestCalculator) ... ok
+test_subtract (tests.test_calculator.TestCalculator) ... ok
+test_add_endpoint (tests.test_api.TestApi) ... ok
+test_add_invalid_input (tests.test_api.TestApi) ... ok
+test_divide_by_zero (tests.test_api.TestApi) ... ok
+test_divide_endpoint (tests.test_api.TestApi) ... ok
+test_divide_invalid_input (tests.test_api.TestApi) ... ok
+test_multiply_endpoint (tests.test_api.TestApi) ... ok
+test_multiply_invalid_input (tests.test_api.TestApi) ... ok
+test_subtract_endpoint (tests.test_api.TestApi) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.045s
+
+OK
+```
+
+#### Testing API Endpoints
+
+The API testing example shows how to test REST endpoints:
+
+```python
+class TestApi(unittest.TestCase):
+    def setUp(self):
+        app.config['TESTING'] = True
+        self.client = app.test_client()
+
+    def test_add_endpoint(self):
+        response = self.client.post('/add', json={'a': 2, 'b': 3})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json['result'], 5)
+
+    def test_add_invalid_input(self):
+        response = self.client.post('/add', json={'a': 'invalid', 'b': 3})
+        self.assertEqual(response.status_code, 400)
 ```
 
 ## Integration with CI/CD
@@ -279,8 +359,18 @@ jobs:
 
 ## Next Steps
 
-1. Explore the `math_utils/` example package
-2. Try writing your own test cases
-3. Experiment with fixtures and parameterized tests
-4. Set up test coverage reporting
-5. Integrate tests into your development workflow
+1. **Start with Basic Testing**: Explore the `math_utils/` example package
+2. **Progress to API Testing**: Try the `math_utils_api/` Flask example
+3. **Write Your Own Tests**: Create test cases for your own projects
+4. **Experiment with Advanced Features**: Try fixtures and parameterized tests
+5. **Set Up Test Coverage**: Use coverage reporting to improve test quality
+6. **Integrate with CI/CD**: Add testing to your development workflow
+7. **Explore Web Testing**: Learn more about testing REST APIs and web services
+
+## Choosing Your Starting Point
+
+- **New to Testing?** Start with the `math_utils/` basic example
+- **Building Web APIs?** Jump to the `math_utils_api/` Flask example  
+- **Want Both?** Work through both examples in order
+
+Each example includes comprehensive documentation and step-by-step instructions to help you learn Nose2 testing effectively.
