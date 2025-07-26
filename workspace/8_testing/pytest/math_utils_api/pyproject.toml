@@ -1,0 +1,10 @@
+[project]
+name = "math_utils"
+version = "0.1.0"
+description = "A simple math library"
+authors = [{ name = "Jay Gaha", email = "jaygaha@gmail.com" }]
+readme = "README.md"
+dependencies = ["fastapi>=0.115.0"]
+
+[project.optional-dependencies]
+test = ["flake8>=5.0.0", "uvicorn>=0.30.0"]
