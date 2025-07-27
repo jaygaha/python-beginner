@@ -1,0 +1,10 @@
+[project]
+name = "math_utils"
+version = "0.1.0"
+description = "A simple math library"
+authors = [{ name = "Jay Gaha", email = "jaygaha@gmail.com" }]
+readme = "README.md"
+dependencies = []
+
+[project.optional-dependencies]
+test = []
