@@ -88,3 +88,18 @@ python -m unittest tests.test_calculator -v
 
 For a complete guide on the `math_utils` implementation, including unit tests and project structure, please see its detailed README file:
 [math_utils/README.md](./math_utils/README.md)
+
+## Example Project: `math_utils_api`
+
+This directory also contains a more advanced example, `math_utils_api`, which demonstrates how to use `pytest` to run doctests alongside traditional unit tests in a FastAPI application.
+
+**Explore the project:** [math_utils_api/](./math_utils_api/)
+
+### Key Concepts Demonstrated in `math_utils_api`
+
+- **Testing FastAPI with `pytest`**: Shows how to test a web API built with FastAPI.
+- **Combined Test Strategy**: Integrates `doctest` for simple function verification and `pytest` for more complex scenarios like API endpoint testing.
+- **Modern Project Tooling**: Uses `pyproject.toml` for dependency management, a standard in modern Python projects.
+
+For a complete guide on the `math_utils_api` implementation, including setup, running the server, and testing, please see its detailed README file:
+[math_utils_api/README.md](./math_utils_api/README.md)
