@@ -65,13 +65,17 @@ uvicorn main:app --reload
 
 ## Tutorials
 
-- [Day 01: FastAPI Basics & Testing](day01/README.md)  
-  Learn how to build your first FastAPI application, create simple endpoints, and write automated tests.  
+- [Day 01: FastAPI Basics & Testing](day01/README.md)
+  Learn how to build your first FastAPI application, create simple endpoints, and write automated tests.
   _Includes: project structure, endpoint examples, running instructions, and test coverage._
+
+- [Day 02: Request & Response Models, Validation, and Testing](day02/README.md)
+  Learn how to define request and response models with Pydantic, validate user input, build basic CRUD endpoints, and write automated tests for your API.
+  _Includes: user model examples, validation, CRUD routes, and test coverage._
 
 ---
 
-## Project Structure
+## Recommended Project Structure
 
 ```
 fastapi-project
