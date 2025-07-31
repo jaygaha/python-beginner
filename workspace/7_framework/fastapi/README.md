@@ -73,6 +73,10 @@ uvicorn main:app --reload
   Learn how to define request and response models with Pydantic, validate user input, build basic CRUD endpoints, and write automated tests for your API.
   _Includes: user model examples, validation, CRUD routes, and test coverage._
 
+- [Day 03: Path Parameters and Query Parameters](day03/README.md)
+  Learn how to handle user requests with path parameters and query parameters. This includes validation, filtering, sorting, and automated tests.
+  _Includes: path parameter examples, query parameter examples, and test coverage._
+
 ---
 
 ## Recommended Project Structure
