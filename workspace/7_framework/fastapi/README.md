@@ -77,6 +77,10 @@ uvicorn main:app --reload
   Learn how to handle user requests with path parameters and query parameters. This includes validation, filtering, sorting, and automated tests.
   _Includes: path parameter examples, query parameter examples, and test coverage._
 
+- [Day 04: Request Body and Form Data](day04/README.md)
+  Learn how to handle JSON request bodies, work with form data and file uploads, and combine different types of parameters in your API endpoints.
+  _Includes: request body examples, form and file upload handling, mixed parameter endpoints, and test coverage._
+
 ---
 
 ## Recommended Project Structure
