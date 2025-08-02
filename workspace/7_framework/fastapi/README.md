@@ -81,6 +81,10 @@ uvicorn main:app --reload
   Learn how to handle JSON request bodies, work with form data and file uploads, and combine different types of parameters in your API endpoints.
   _Includes: request body examples, form and file upload handling, mixed parameter endpoints, and test coverage._
 
+- [Day 05: HTTP Status Codes and Error Handling](day05/README.md)
+  Learn how to use and return appropriate HTTP status codes, create custom exception classes, handle validation and business logic errors, and implement global exception handlers for consistent error responses.
+  _Includes: custom error classes, exception handlers, validation and business logic error handling, logging, and test coverage._
+
 ---
 
 ## Recommended Project Structure
