@@ -85,6 +85,10 @@ uvicorn main:app --reload
   Learn how to use and return appropriate HTTP status codes, create custom exception classes, handle validation and business logic errors, and implement global exception handlers for consistent error responses.
   _Includes: custom error classes, exception handlers, validation and business logic error handling, logging, and test coverage._
 
+- [Day 06: Dependencies and Dependency Injection](day06/README.md)
+  Learn how to use FastAPI's powerful dependency injection system to manage dependencies, handle security, and create reusable components.
+  _Includes: function and class-based dependencies, authentication, authorization, sub-dependencies, and dependency caching._
+
 ---
 
 ## Recommended Project Structure
