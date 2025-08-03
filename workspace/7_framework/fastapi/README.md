@@ -89,6 +89,10 @@ uvicorn main:app --reload
   Learn how to use FastAPI's powerful dependency injection system to manage dependencies, handle security, and create reusable components.
   _Includes: function and class-based dependencies, authentication, authorization, sub-dependencies, and dependency caching._
 
+- [Day 07: Middleware and CORS](day07/README.md)
+  Learn how to work with middleware to process requests and responses globally and how to configure Cross-Origin Resource Sharing (CORS) to allow your frontend applications to interact with your API.
+  _Includes: custom middleware, logging, performance monitoring, and CORS configuration._
+
 ---
 
 ## Recommended Project Structure
