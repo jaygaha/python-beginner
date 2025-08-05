@@ -93,6 +93,10 @@ uvicorn main:app --reload
   Learn how to work with middleware to process requests and responses globally and how to configure Cross-Origin Resource Sharing (CORS) to allow your frontend applications to interact with your API.
   _Includes: custom middleware, logging, performance monitoring, and CORS configuration._
 
+- [Day 08: Advanced File Uploads and Management](day08/README.md)
+  Learn how to handle advanced file uploads, serve static files, and build a complete file management system with features like validation, image processing, and searching.
+  _Includes: single and multiple file uploads, static file serving, validation, image thumbnail generation, and a complete file management API._
+
 ---
 
 ## Recommended Project Structure
