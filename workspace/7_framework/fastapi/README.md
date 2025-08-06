@@ -97,6 +97,10 @@ uvicorn main:app --reload
   Learn how to handle advanced file uploads, serve static files, and build a complete file management system with features like validation, image processing, and searching.
   _Includes: single and multiple file uploads, static file serving, validation, image thumbnail generation, and a complete file management API._
 
+- [Day 09: Database Integration with SQLAlchemy](day09/README.md)
+  Learn how to integrate a SQL database with FastAPI using SQLAlchemy, manage database sessions, define models and schemas, and implement CRUD operations.
+  _Includes: SQLAlchemy setup, session management, CRUD utils, and testing with a SQLite database._
+
 ---
 
 ## Recommended Project Structure
