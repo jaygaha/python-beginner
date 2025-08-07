@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+pytest
+httpx
+redis
+slowapi
+fastapi-cache2[redis]
