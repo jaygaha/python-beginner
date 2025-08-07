@@ -99,7 +99,11 @@ uvicorn main:app --reload
 
 - [Day 09: Database Integration with SQLAlchemy](day09/README.md)
   Learn how to integrate a SQL database with FastAPI using SQLAlchemy, manage database sessions, define models and schemas, and implement CRUD operations.
-  _Includes: SQLAlchemy setup, session management, CRUD utils, and testing with a SQLite database._
+  _Includes: SQLAlchemy setup, session management, CRUD utils, and testing with an in-memory database._
+
+- [Day 10: Advanced Features - Caching, Rate Limiting, and Background Tasks](day10/README.md)
+  Learn to implement caching with Redis, protect endpoints with rate limiting, and defer long-running jobs with background tasks.
+  _Includes: `fastapi-cache2`, `slowapi`, `BackgroundTasks`, lifespan events, and testing._
 
 ---
 
