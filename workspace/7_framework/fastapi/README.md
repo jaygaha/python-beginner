@@ -105,6 +105,10 @@ uvicorn main:app --reload
   Learn to implement caching with Redis, protect endpoints with rate limiting, and defer long-running jobs with background tasks.
   _Includes: `fastapi-cache2`, `slowapi`, `BackgroundTasks`, lifespan events, and testing._
 
+- [Day 11: Production-Ready Auth with JWT](day11/README.md)
+  Learn to build a production-ready authentication system with JWT, including project structure, configuration management, password hashing, and dependency injection.
+  _Includes: `pydantic-settings`, `passlib`, `python-jose`, SQLAlchemy, and comprehensive testing._
+
 ---
 
 ## Recommended Project Structure
