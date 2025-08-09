@@ -109,6 +109,10 @@ uvicorn main:app --reload
   Learn to build a production-ready authentication system with JWT, including project structure, configuration management, password hashing, and dependency injection.
   _Includes: `pydantic-settings`, `passlib`, `python-jose`, SQLAlchemy, and comprehensive testing._
 
+- [Day 12: Real-Time Chat with WebSockets](day12/README.md)
+  Learn how to build a real-time chat application with WebSockets, manage connections, and broadcast messages.
+  _Includes: `WebSocket`, connection management, client-side integration, and `pytest` for WebSockets._
+
 ---
 
 ## Recommended Project Structure
