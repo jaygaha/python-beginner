@@ -65,6 +65,8 @@ uvicorn main:app --reload
 
 ## Tutorials
 
+We will cover the important concepts of FastAPI in this series of tutorials. WE will cover these topics in 14 days series of tutorials.
+
 - [Day 01: FastAPI Basics & Testing](day01/README.md)
   Learn how to build your first FastAPI application, create simple endpoints, and write automated tests.
   _Includes: project structure, endpoint examples, running instructions, and test coverage._
@@ -112,6 +114,10 @@ uvicorn main:app --reload
 - [Day 12: Real-Time Chat with WebSockets](day12/README.md)
   Learn how to build a real-time chat application with WebSockets, manage connections, and broadcast messages.
   _Includes: `WebSocket`, connection management, client-side integration, and `pytest` for WebSockets._
+
+- [Day 13: Advanced Documentation & OpenAPI Customization](day13/README.md)
+  Learn to create rich, detailed, and customized API documentation with OpenAPI, including custom UIs, advanced schemas, and versioning.
+  _Includes: OpenAPI customization, custom documentation UIs, `pydantic-settings`, rich metadata, and documentation testing._
 
 ---
 
